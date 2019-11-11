@@ -4,7 +4,6 @@ var FileImporterPlugin = {
       var fileInput = document.createElement('input');
       fileInput.setAttribute('type', 'file');
       fileInput.setAttribute('id', 'FileImporter');
-      fileInput.setAttribute('accept', '.vrm')
       fileInput.style.visibility = 'hidden';
       fileInput.onclick = function (event) {
         this.value = null;
