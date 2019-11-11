@@ -1,4 +1,11 @@
 # WeirdBehaviorOfOnClickFunctionInUnityWebGL
+UnityのWebGLビルドでOnClick()が変な挙動をするデモ
+
+
+## Demo page
+実際に動作するページ
+
+https://kilimanjaro-a2.github.io/WeirdBehaviorOfOnClickFunctionInUnityWebGL/
 
 
 ## What is this?
