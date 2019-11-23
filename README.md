@@ -1,44 +1,35 @@
 # WeirdBehaviorOfOnClickFunctionInUnityWebGL
-UnityのWebGLビルドでOnClick()が変な挙動をするデモ
+
+A demonstration that the OnClick() function behaves weirdly in a WebGL build with Unity.
 
 
-## Demo page
-実際に動作するページ
+## The demo page
 
 https://kilimanjaro-a2.github.io/WeirdBehaviorOfOnClickFunctionInUnityWebGL/
 
+This app is written in Japanese, but you can probably understand what happens even if you are not a Japanese speaker.
 
-## What is this?
+## Description
 
-UnityのWebGLビルドで、.jslibに記述した関数を呼び出したいとき、
+When you want to call a function written in .jslib in WebGL build with Unity,
 
-EventTriggerコンポーネントのPointerDown()を使用した場合は正常に動作するが、
+it will work correctly if you use PointerDown () of EventTrigger component.
 
-ButtonコンポーネントのOnClick()を使用した場合、1回目のクリックが反応しないことを確かめるためのデモ。
+However, when OnClick () of the Button component is used, the first click does not respond.
 
+This project is a demo of that weird behaviour.
 
-## Memo
+## Supplement
 
-JslibCaller.csというファイルに、OnButtonClicked()というメソッドを定義し、
-
-.jslib上のFileImporterCaptureClick()を呼び出すよう記述した。
-
-これをButtonコンポーネントのOnClick()から呼び出すと、
-
-OnButtonClicked()は正常に呼ばれるが、その中で呼び出しているFileImporterCaptureClick()は呼び出されず、
-
-2回目のクリックで遅れて呼ばれるという謎の挙動をする。
+I defined a method called OnButtonClicked() a file called JslibCaller.cs and this calls CaptureClick () on .jslib.
 
 
-原因は不明。
+If this is called from OnClick () of the Button component,
 
+OnButtonClicked () is called normally, but the FileImporterCaptureClick () called in it is not called.
 
-## Reference
+And for some reason it is called with a second click.
 
-WebGLからファイルダイアログを呼び出す方法については、以下の記事を参考にさせていただきました。
+I don't know the cause.
 
-
-https://qiita.com/torikasyu/items/bc45f51f855f332a64f7
-
-
-https://qiita.com/mechamogera/items/89d4555b202af96810af
+If anyone can explain this strange behavior, please let me know.
